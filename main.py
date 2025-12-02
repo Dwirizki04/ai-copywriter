@@ -27,7 +27,7 @@ def generate_description(nama_produk, fitur, tone_bahasa):
     Fungsi ini mengirim data ke AI dan menerima teks balasan.
     """
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash')
         
         # Prompt Engineering: Ini adalah 'resep rahasia' agar hasilnya bagus
         prompt = f"""
@@ -95,4 +95,5 @@ if buat_deskripsi:
             st.markdown(hasil_teks)
             
             # Tambahan tombol copy (opsional logic)
+
             st.caption("Tips: Copy teks di atas dan paste ke Shopee/Tokopedia Anda.")
